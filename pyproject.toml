@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "attribtool"
-version = "1.0.0"
-description = "Base classes for restricting the dynamic creation of attributes in inheriting classess."
+version = "1.0.1"
+description = "Base classes for restricting the creation of dynamic attributes on instances of derived types."
 authors = ["Jacek Kotlarski <szumak@virthost.pl>"]
 maintainers = ["Jacek Kotlarski <szumak@virthost.pl>"]
 license = "MIT"

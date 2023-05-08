@@ -22,7 +22,7 @@ console.toolbox = [{'autosave': False,
                                ''),
                     'shared': False,
                     'title': 'Terminal 1'}]
-proj.directory-list = [{'dirloc': loc('..'),
+proj.directory-list = [{'dirloc': loc('.'),
                         'excludes': (),
                         'filter': '*',
                         'include_hidden': False,

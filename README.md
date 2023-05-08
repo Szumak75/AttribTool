@@ -1,6 +1,6 @@
 # AttribTool
 
-The project contains base classes that limit the possibility of adding new attributes without their prior declaration to classes inheriting from them or their objects.
+The project contains base classes that limit the possibility of adding new attributes without their prior declaration inside classes inheriting from them or their objects.
 
 Classes throw an AttributeError exception when trying to add an undefined attribute to a derived class or its object.
 

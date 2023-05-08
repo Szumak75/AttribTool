@@ -3,8 +3,8 @@
   Author:  Jacek Kotlarski --<szumak@virthost.pl>
   Created: 07.05.2023
 
-  Purpose: NoDynamicAttributes class for restricting the dynamic creation
-  of attributes in inheriting classes.
+  Purpose: NoDynamicAttributes class for restricting the creation
+  of dynamic attributes on instances of derived types.
 """
 
 from typing import Any
@@ -13,8 +13,8 @@ from typing import Any
 class NoDynamicAttributes:
     """NoDynamicAttributes - base class.
 
-    Class for restricting the dynamic creation of attributes in inheriting
-    classes.
+    Class for restricting the creation of dynamic attributes on instances
+    of derived types.
     """
 
     def __setattr__(self, name: str, value: Any) -> None:

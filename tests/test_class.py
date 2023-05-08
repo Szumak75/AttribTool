@@ -43,7 +43,7 @@ class TestNoNewAttributes(unittest.TestCase):
         """Test nr 2."""
         try:
             self.workclass.abc = 1
-            self.workclass._abc = "test"
+            self.workclass.abc = "test"
         except Exception as ex:
             self.assertTrue(isinstance(ex, AttributeError))
         else:
@@ -83,7 +83,7 @@ class TestNoDynamicAttributes(unittest.TestCase):
         """Test nr 2."""
         try:
             self.workclass.abc = 1
-            self.workclass._abc = "test"
+            self.workclass.abc = "test"
         except Exception as ex:
             self.assertTrue(isinstance(ex, AttributeError))
         else:
