@@ -10,11 +10,10 @@
   A. Ravenscroft, D. Ascher
 """
 
-from types import FunctionType
-from typing import Any
+from typing import Any, Callable
 
 
-def _no_new_attributes(wrapped_setattr: Any) -> FunctionType:
+def _no_new_attributes(wrapped_setattr: Any) -> Callable[[Any, str, Any], None]:
     """Internal function for use in the current module only."""
 
     def __setattr__(self, name: str, value: Any) -> None:
@@ -36,10 +35,10 @@ class NoNewAttributes:
     of derived types.
     """
 
-    __setattr__: FunctionType = _no_new_attributes(object.__setattr__)
+    __setattr__: Callable[[Any, str, Any], None] = _no_new_attributes(object.__setattr__)
 
     class __metaclass__(type):
-        __setattr__: FunctionType = _no_new_attributes(type.__setattr__)
+        __setattr__: Callable[[Any, str, Any], None] = _no_new_attributes(type.__setattr__)
 
 
 # #[EOF]#######################################################################
